@@ -1,0 +1,24 @@
+{
+  "name": "@codewell/state-persistor",
+  "version": "1.0.0",
+  "description": "State persistor for front end applications",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewell/state-persistor.git"
+  },
+  "keywords": [
+    "state",
+    "localstorage",
+    "persist"
+  ],
+  "author": "Filip Johansson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codewell/state-persistor/issues"
+  },
+  "homepage": "https://github.com/codewell/state-persistor#readme"
+}
