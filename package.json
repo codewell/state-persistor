@@ -2,9 +2,9 @@
   "name": "@codewell/state-persistor",
   "version": "1.0.0",
   "description": "State persistor for front end applications",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "npm run release && jest",
     "build": "rollup --config",
     "release": "npm run build:dev && npm run build:prod",
     "build:prod": "NODE_ENV=production rollup -c",
