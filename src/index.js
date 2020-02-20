@@ -1,9 +1,5 @@
-const loadState = require('./loadState');
-const purgeState = require('./purgeState');
-const saveState = require('./saveState');
+import loadState from "./loadState";
+import purgeState from "./purgeState";
+import saveState from "./saveState";
 
-module.exports = {
-  loadState,
-  purgeState,
-  saveState,
-};
+export { loadState, purgeState, saveState };

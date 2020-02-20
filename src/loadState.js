@@ -3,7 +3,7 @@
  * @param {string} storageKey - What key in localstorage to load from
  * @returns {Object} - Returns the persisted state
  */
-const loadState = (storageKey) => {
+const loadState = storageKey => {
   try {
     const serializedState = localStorage.getItem(storageKey);
     if (serializedState === null) {
@@ -15,4 +15,4 @@ const loadState = (storageKey) => {
   }
 };
 
-module.exports = loadState;
+export default loadState;

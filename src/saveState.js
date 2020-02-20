@@ -12,4 +12,4 @@ const saveState = (state, storageKey) => {
   }
 };
 
-module.exports = saveState;
+export default saveState;
