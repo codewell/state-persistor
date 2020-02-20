@@ -4,7 +4,12 @@
   "description": "State persistor for front end applications",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "rollup --config",
+    "release": "npm run build:dev && npm run build:prod",
+    "build:prod": "NODE_ENV=production rollup -c",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "dry-release": "npm run release && npm pack"
   },
   "repository": {
     "type": "git",
@@ -20,5 +25,27 @@
   "bugs": {
     "url": "https://github.com/codewell/state-persistor/issues"
   },
-  "homepage": "https://github.com/codewell/state-persistor#readme"
+  "homepage": "https://github.com/codewell/state-persistor#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-replace": "^2.3.1",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "rollup": "^1.31.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
 }
